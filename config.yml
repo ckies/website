@@ -1,0 +1,20 @@
+DefaultContentLanguage: en
+baseURL: https://cookies.wtf/
+title: Cookies.WTF
+
+disableHugoGeneratorInject: true
+
+disableKinds:
+  - RSS
+  - 404
+
+params:
+  robots: INDEX, FOLLOW
+
+pygmentsUseClasses: true
+
+enableRobotsTXT: true
+
+taxonomies:
+  tag: ''
+  category: ''

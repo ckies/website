@@ -1,0 +1,12 @@
+services:
+  - cloudflare
+  - gauges
+additions:
+  - name: example_functional
+    info: Example Functional Cookie
+    type: functional
+    expires: 1y
+  - name: example_marketing
+    info: Example Marketing Cookie
+    type: marketing
+    expires: 1y

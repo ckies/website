@@ -1,0 +1,9 @@
+content/cookies
+dist
+node_modules
+public
+static/scripts/*.js
+static/styles/*.css
+static/styles/*.css.map
+
+*.log
