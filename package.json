@@ -1,22 +1,31 @@
 {
-  "name": "website",
+  "name": "@ckies/website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Website for Cookies.WTF",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "start": "gulp serve"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cookies",
+    "gdpr",
+    "privacy",
+    "builder",
+    "policy",
+    "settings",
+    "static",
+    "hugo"
+  ],
+  "author": "Sebastian Müller <code@sbstjn.com",
   "license": "MIT",
   "devDependencies": {
     "@ckies/cli": "^0.0.10",
+    "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1",
     "gulp-shell": "^0.6.5",
     "gulp-sourcemaps": "^2.6.4",
-    "hugo-bin": "^0.27.0",
-    "gulp": "^3.9.1",
     "gulp-typescript": "^4.0.2",
+    "hugo-bin": "^0.27.0",
     "typescript": "^2.8.3"
   }
 }
