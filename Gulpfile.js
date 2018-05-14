@@ -23,17 +23,7 @@ gulp.task('styles:watch',
 )
 
 gulp.task('scripts:build',
-  () => gulp.src('source/scripts/*.ts').pipe(
-    gulpSourcemaps.init()
-  ).pipe(
-    gulpTypeScript(
-      { noImplicitAny: true, out: 'main.js' }
-    )
-  ).js.pipe(
-    gulpSourcemaps.write()
-  ).pipe(
-    gulp.dest('static/scripts/')
-  )
+  gulpShell.task('webpack --silent')
 )
 
 gulp.task('scripts:watch',
@@ -56,11 +46,16 @@ gulp.task('hugo:serve',
   gulpShell.task('hugo serve')
 )
 
+gulp.task('library:copy',
+  gulpShell.task('mkdir -p static/lib; cp node_modules/@ckies/library/dist/ckies.min.js static/lib')
+)
+
 gulp.task('serve',
   [
     'styles:build',
     'scripts:build',
     'cookies:build',
+    'library:copy',
     'hugo:serve',
     'styles:watch',
     'scripts:watch',
@@ -70,7 +65,11 @@ gulp.task('serve',
 
 gulp.task('build',
   [
-    'styles:build'
+    'styles:build',
+    'scripts:build',
+    'cookies:build',
+    'library:copy',
+    'hugo:build'
   ]
 )
 
