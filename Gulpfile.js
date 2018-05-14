@@ -19,7 +19,7 @@ gulp.task('styles:build',
 )
 
 gulp.task('styles:watch',
-  () => gulp.watch(['./source/styles/**/*.sass'], ['styles:build'])
+  () => gulp.watch(['source/styles/**/*.sass'], ['styles:build'])
 )
 
 gulp.task('scripts:build',
@@ -27,19 +27,19 @@ gulp.task('scripts:build',
 )
 
 gulp.task('scripts:watch',
-  () => gulp.watch(['./source/scripts/*.ts'], ['scripts:build'])
+  () => gulp.watch(['source/scripts/*.ts'], ['scripts:build'])
 )
 
 gulp.task('cookies:build',
-  gulpShell.task('ckies --silent --flat --language en --output ./content/cookies --format markdown')
+  gulpShell.task('ckies --silent --flat --language en --output content/cookies --format markdown; ls -ahl content/cookies')
 )
 
 gulp.task('cookies:watch',
-  () => gulp.watch(['./cookies.yml'], ['cookies:build'])
+  () => gulp.watch(['cookies.yml'], ['cookies:build'])
 )
 
 gulp.task('hugo:build',
-  gulpShell.task('hugo --destination dist --quiet')
+  gulpShell.task('hugo --destination dist --quiet; ls -ahl dist/cookies; ls -ahl dist/cookies/policy;')
 )
 
 gulp.task('hugo:serve',
