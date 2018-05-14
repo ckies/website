@@ -57,18 +57,17 @@ gulp.task('clean',
 )
 
 gulp.task('assets:build',
-  [
+  gulpSequence(
     'clean',
     'styles:build',
     'scripts:build',
     'cookies:build',
     'library:copy'
-  ]
+  )
 )
 
 gulp.task('serve',
   [
-    'assets:build',
     'hugo:serve',
     'styles:watch',
     'scripts:watch',
@@ -76,11 +75,7 @@ gulp.task('serve',
   ]
 )
 
-gulp.task('build',
-  gulpSequence(
-    'assets:build',
-    'hugo:build'
-  )
-)
+gulp.task('start', gulpSequence('assets:build', 'serve'))
+gulp.task('build', gulpSequence('assets:build', 'hugo:build'))
 
 gulp.task('default', ['build'])
