@@ -79,7 +79,7 @@ Aenean venenatis, turpis nec dignissim varius, ligula purus imperdiet metus, nec
 Aenean venenatis, turpis nec dignissim varius, ligula purus imperdiet metus, nec semper sapien.
 
 ```html
-<script src="https://cookies.wtf/lib/ckies.min.js"></script>
+<script src="https://cookies.wtf/ckies.min.js"></script>
 
 <script>
   if (ckies.useMarketing()) {

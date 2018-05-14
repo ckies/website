@@ -47,7 +47,11 @@ gulp.task('hugo:serve',
 )
 
 gulp.task('library:copy',
-  gulpShell.task('mkdir -p static/lib; cp node_modules/@ckies/library/dist/ckies.min.js static/lib')
+  gulpShell.task('cp node_modules/@ckies/library/dist/ckies.min.js static')
+)
+
+gulp.task('clean',
+  gulpShell.task('rm -rf dist; mkdir -p dist')
 )
 
 gulp.task('serve',
@@ -65,6 +69,7 @@ gulp.task('serve',
 
 gulp.task('build',
   [
+    'clean',
     'styles:build',
     'scripts:build',
     'cookies:build',
