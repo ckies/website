@@ -1,0 +1,17 @@
+.page-settings
+  h2:not(#strictly-necessary-cookies)
+    float: left
+
+    & + p
+      margin-top: 25px
+      text-align: right
+
+      @media all and (min-width: 440px)
+        margin-top: 30px
+
+      & + p
+        clear: both
+
+      input
+        position: relative
+        top: -2px

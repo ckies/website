@@ -20,7 +20,7 @@
           <h1 class="title">{{ .Title }}</h1>
         {{ end }}
 
-        <div class="page">
+        <div class="page page-{{ .File.BaseFileName }}">
           {{ block "main" . }}
             {{ .Content }}
           {{ end }}
