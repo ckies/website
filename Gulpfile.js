@@ -23,7 +23,7 @@ gulp.task('styles:watch',
 )
 
 gulp.task('scripts:build',
-  gulpShell.task('webpack --silent')
+  () => gulpShell.task('webpack --silent')
 )
 
 gulp.task('scripts:watch',
@@ -31,7 +31,7 @@ gulp.task('scripts:watch',
 )
 
 gulp.task('cookies:build',
-  gulpShell.task('ckies --silent --flat --language en --output content/cookies --format markdown; ls -ahl content/cookies')
+  () => gulpShell.task('ckies --silent --flat --language en --output content/cookies --format markdown')
 )
 
 gulp.task('cookies:watch',
@@ -39,19 +39,19 @@ gulp.task('cookies:watch',
 )
 
 gulp.task('hugo:build',
-  gulpShell.task('hugo --destination dist --quiet; ls -ahl dist/cookies; ls -ahl dist/cookies/policy;')
+  () => gulpShell.task('hugo --destination dist --quiet')
 )
 
 gulp.task('hugo:serve',
-  gulpShell.task('hugo serve')
+  () => gulpShell.task('hugo serve')
 )
 
 gulp.task('library:copy',
-  gulpShell.task('cp node_modules/@ckies/library/dist/ckies.min.js static')
+  () => gulpShell.task('cp node_modules/@ckies/library/dist/ckies.min.js static')
 )
 
 gulp.task('clean',
-  gulpShell.task('rm -rf dist; mkdir -p dist')
+  () => gulpShell.task('rm -rf dist; mkdir -p dist')
 )
 
 gulp.task('serve',
