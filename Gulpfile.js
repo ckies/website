@@ -1,8 +1,10 @@
 var gulp = require('gulp')
 var gulpSass = require('gulp-sass')
 var gulpShell = require('gulp-shell')
+var gulpSequence = require('gulp-sequence')
 var gulpTypeScript = require('gulp-typescript')
 var gulpSourcemaps = require('gulp-sourcemaps')
+
 
 gulp.task('styles:build',
   () => gulp.src('source/styles/main.sass').pipe(
@@ -68,14 +70,14 @@ gulp.task('serve',
 )
 
 gulp.task('build',
-  [
+  gulpSequence(
     'clean',
     'styles:build',
     'scripts:build',
     'cookies:build',
     'library:copy',
     'hugo:build'
-  ]
+  )
 )
 
 gulp.task('default', ['build'])
