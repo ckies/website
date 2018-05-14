@@ -16,9 +16,9 @@
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
     "lib": [
-      "es2015",
-      "es2016",
-      "dom"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
     "declaration": false
   },

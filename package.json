@@ -19,7 +19,7 @@
   "author": "Sebastian Müller <code@sbstjn.com>",
   "license": "MIT",
   "devDependencies": {
-    "@ckies/cli": "^0.0.10",
+    "@ckies/cli": "0.0.11",
     "@ckies/library": "0.1.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1",
