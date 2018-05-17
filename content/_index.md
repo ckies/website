@@ -7,7 +7,9 @@ image: /images/splash.jpg
 
 ---
 
-Most pages I create use cookies, but every time I struggle again with being verbose about how cookies are used. I want to stop this, at least for my personal projects. This page is my attempt to have a clean ressource which is the base for the **Cookie Policies** I use for other projects.
+Most pages I create use cookies. But for every new project or website, I struggle again with being verbose about how cookies are used. I want to stop this, at least for my personal projects!
+
+This page is my attempt to have a clean resource which is the foundation for the **Cookie Policies** and **Cookie Settings** I use for other projects.
 
 ## Policy Generator
 
