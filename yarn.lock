@@ -29,9 +29,9 @@
   dependencies:
     js-yaml "^3.11.0"
 
-"@ckies/library@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ckies/library/-/library-0.1.0.tgz#86309a7847f5b6b5ed59f00a556969db1e661199"
+"@ckies/library@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@ckies/library/-/library-0.2.0.tgz#b8702be06cd3496dd68c35ccd0c3f3bb88ed968f"
 
 "@ckies/pages@0.0.8":
   version "0.0.8"

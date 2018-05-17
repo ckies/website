@@ -20,7 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "@ckies/cli": "0.0.11",
-    "@ckies/library": "0.1.0",
+    "@ckies/library": "^0.2.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.1",
     "gulp-sequence": "^1.0.0",
